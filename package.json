@@ -1,0 +1,22 @@
+{
+  "name": "pop-it-up",
+  "version": "1.0.0",
+  "description": "A map for pop up shops to share their event details",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "weather",
+    "api",
+    "selfie"
+  ],
+  "author": "Taylor Simpson",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "express": "^4.16.4",
+    "nedb": "^1.8.0",
+    "node-fetch": "^2.6.0"
+  }
+}
