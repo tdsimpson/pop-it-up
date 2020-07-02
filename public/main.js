@@ -21,17 +21,22 @@ if ('geolocation' in navigator) {
       console.error(error);
     }
 
-    const data = { lat, lon, weather };
-    const options = {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    };
-    const db_response = await fetch('/api', options);
-    const db_json = await db_response.json();
-    console.log(db_json);
+    const button = document.getElementById('submit');
+    button.addEventListener('click', async event => {
+      const shopName = document.getElementById('shopName').value;
+      const data = { lat, lon, shopName, weather };
+      const options = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      };
+      const response = await fetch('/api', options);
+      const json = await response.json();
+      console.log(json);
+    });
+
   });
 } else {
   console.log('geolocation not available');
