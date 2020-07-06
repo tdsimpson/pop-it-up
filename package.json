@@ -4,7 +4,7 @@
   "description": "A map for pop up shops to share their event details",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
   "keywords": [
     "weather",
@@ -17,6 +17,7 @@
     "dotenv": "^8.0.0",
     "express": "^4.16.4",
     "nedb": "^1.8.0",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.0",
+    "nodemon": "^2.0.4"
   }
 }
