@@ -13,11 +13,16 @@ async function getData() {
   const response = await fetch('/api');
   const data = await response.json();
 
+  console.log(data);
+
   for (item of data) {
     const marker = L.marker([item.lat, item.lon]).addTo(mymap);
-    let txt = `${item.shopName}. The weather here at ${item.lat}&deg;,
-    ${item.lon}&deg; is ${item.weather.weather[0].description} with
-    a temperature of ${Math.round(item.weather.main.temp - 273.15)}&deg; C. Updated at ${item.timestamp}`;
+
+    let txt = `${item.shopName}.<br> 
+    ${item.eventDetails} <br>
+    ${item.weather.name} is ${Math.round(item.weather.main.temp - 273.15)}&deg;C. 
+    with ${item.weather.weather[0].description} <br>
+    Updated at ${item.timestamp}`;
 
     marker.bindPopup(txt);
   }

@@ -14,6 +14,7 @@ if ('geolocation' in navigator) {
       const json = await response.json();
       weather = json
 
+      //document.getElementById('city').textContent = weather;
       document.getElementById('summary').textContent = weather.weather[0].description;
       document.getElementById('temp').textContent = Math.round(weather.main.temp - 273.15);
 
@@ -24,7 +25,8 @@ if ('geolocation' in navigator) {
     const button = document.getElementById('submit');
     button.addEventListener('click', async event => {
       const shopName = document.getElementById('shopName').value;
-      const data = { lat, lon, shopName, weather };
+      const eventDetails = document.getElementById('eventDetails').value;
+      const data = { lat, lon, shopName, eventDetails, weather };
       const options = {
         method: 'POST',
         headers: {
