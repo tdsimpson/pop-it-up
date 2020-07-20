@@ -16,6 +16,8 @@ let blackIcon = new L.Icon({
   shadowSize: [41, 41]
 });
 
+
+
 getData();
 
 async function getData() {
@@ -31,7 +33,10 @@ async function getData() {
     ${item.eventDetails} <br>
     ${item.weather.name} is ${Math.round(item.weather.main.temp - 273.15)}&deg;C. 
     with ${item.weather.weather[0].description} <br>
-    Updated at ${item.timestamp}`;
+    Updated on ${moment((item.timestamp)).format("LLLL")}`;
+
+
+
 
     marker.bindPopup(txt);
   }
