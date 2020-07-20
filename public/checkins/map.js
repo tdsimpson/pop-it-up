@@ -7,6 +7,15 @@ const tileUrl =
 const tiles = L.tileLayer(tileUrl, { attribution });
 tiles.addTo(mymap);
 
+let blackIcon = new L.Icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-black.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
+
 getData();
 
 async function getData() {
@@ -16,7 +25,7 @@ async function getData() {
   console.log(data);
 
   for (item of data) {
-    const marker = L.marker([item.lat, item.lon]).addTo(mymap);
+    const marker = L.marker([item.lat, item.lon], { icon: blackIcon }).addTo(mymap);
 
     let txt = `${item.shopName}.<br> 
     ${item.eventDetails} <br>

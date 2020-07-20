@@ -1,7 +1,13 @@
 * {
+  font-family: 'Roboto', sans-serif;
   padding: 0;
   margin: 0;
 }
+
+/* textarea {
+  resize: none;
+} */
+
 
 html,
 body,
@@ -59,4 +65,31 @@ body,
 p {
   padding: 10px;
   background-color: lightblue;
+}
+
+.checkin-page {
+  padding: 10px 30px;
+}
+
+#shopName {
+  outline: none;
+}
+
+#eventDetails {
+  outline: none;
+}
+
+#submit {
+  background-color: #000028;
+  border: none;
+  border-radius: 14px;
+  color: white;
+  padding: 8px 40px;
+  outline: none;
+  margin: 10px 0;
+}
+
+#submit:hover {
+  background-color: #333453;
+  cursor: pointer;
 }

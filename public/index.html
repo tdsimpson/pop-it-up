@@ -12,6 +12,7 @@
   </head>
   <body>
 
+
     <div class="navbar">
       <div class="container">
         <div class="logo_div">
@@ -27,20 +28,28 @@
       </div>
 
     </div>
-
     <p>
       The weather here at <span id="latitude"></span>&deg;,
       <span id="longitude"></span>&deg; is <span id="summary"></span> with
       a temperature of <span id="temp"></span>&deg; C.
     </p>
-    <form>
-      <label for="shopName">Enter shop name</label>
-      <input id="shopName" placeholder="Shop Name" />
-      <label for="eventDetails">Event Details</label>
-      <textarea id="eventDetails" maxlength="280" placeholder="280 character
-        max"></textarea>
-    </form>
-    <button id="submit">submit</button>
+
+    <div class="checkin-page">
+      <h3>Check In</h3>
+      <form class="form">
+        <div>
+          <div><label for="shopName">Shop Name</label></div>
+          <div><input id="shopName" /></div>
+        </div>
+        <div>
+          <div><label for="eventDetails">Event Details</label></div>
+
+          <div><textarea id="eventDetails" maxlength="280"></textarea>
+          </div>
+        </div>
+      </form>
+      <button id="submit" onclick="window.location.href='checkins/map.html';">Submit</button>
+    </div>
     <script src="main.js"></script>
   </body>
 </html>
