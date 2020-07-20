@@ -1,0 +1,80 @@
+html,
+body,
+#checkinMap {
+    height: 90%;
+    width: 100%;
+}
+
+
+p {
+    padding: 10px;
+    background-color: lightblue;
+}
+
+.picandtext {
+    display: flex;
+
+    .shop {
+        flex: 1;
+    }
+
+    .submission-form {
+        flex: 1;
+    }
+}
+
+
+.shopimg {
+    max-width: 500px;
+    padding: 3rem;
+}
+
+.submission-form {
+    border: 1.3px solid #403D56;
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 5px;
+
+    label {
+        display: block;
+        padding: 1rem 0 .25rem 0;
+        font-size: 14px;
+    }
+
+    input,
+    textarea,
+    select {
+        display: block;
+        width: 100%;
+        border: 1.3px solid #403D56;
+        padding: .5rem;
+        font-size: 16px;
+    }
+}
+
+
+#shopName {
+    outline: none;
+}
+
+#eventDetails {
+    outline: none;
+
+}
+
+#submit {
+    background-color: #403D56;
+    border: none;
+    color: white;
+    padding: 0.7rem;
+    outline: none;
+    margin: 1rem 0;
+    transform: 0.5s background ease;
+    width: 100%;
+
+    &:hover {
+        background-color: #2680CA;
+        cursor: pointer;
+    }
+}

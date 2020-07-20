@@ -30,15 +30,16 @@ async function getData() {
     const marker = L.marker([item.lat, item.lon], { icon: blackIcon }).addTo(mymap);
 
     let txt = `${item.shopName}.<br> 
+    ${item.catagory}.<br> 
     ${item.eventDetails} <br>
     ${item.weather.name} is ${Math.round(item.weather.main.temp - 273.15)}&deg;C. 
     with ${item.weather.weather[0].description} <br>
-    Updated on ${moment((item.timestamp)).format("LLLL")}`;
-
-
-
+    ${moment((item.timestamp)).format("LLLL")}`;
 
     marker.bindPopup(txt);
+
   }
+
+
   console.log(data);
 }

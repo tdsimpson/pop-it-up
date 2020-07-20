@@ -34,21 +34,37 @@
       a temperature of <span id="temp"></span>&deg; C.
     </p>
 
-    <div class="checkin-page">
-      <h3>Check In</h3>
-      <form class="form">
-        <div>
-          <div><label for="shopName">Shop Name</label></div>
-          <div><input id="shopName" /></div>
-        </div>
-        <div>
-          <div><label for="eventDetails">Event Details</label></div>
 
-          <div><textarea id="eventDetails" maxlength="280"></textarea>
-          </div>
-        </div>
-      </form>
-      <button id="submit" onclick="window.location.href='checkins/map.html';">Submit</button>
+    <div class="picandtext">
+      <img class="shopimg" src="images/business_shop.png" alt="business shop">
+      <div class="submission-form">
+        <form>
+          <h3>Check In</h3>
+
+          <label for="shopName">Shop Name</label>
+          <input id="shopName" type="text" required/>
+
+          <label for="catagory">Catagory</label>
+          <select name="catagory" id="catagory" type="text" required>
+            <option value=""></option>
+            <option value="Accessories">Accessories</option>
+            <option value="Art">Art</option>
+            <option value="Books">Books</option>
+            <option value="Clothing">Clothing</option>
+            <option value="Food">Food</option>
+            <option value="Furniture">Furniture</option>
+            <option value="Pet">Pet</option>
+            <option value="Sports">Sports</option>
+            <option value="Technology">Technology</option>
+            <option value="Toys">Toys</option>
+            <option value="Other">Other</option>
+          </select>
+
+          <label for="eventDetails">Event Details</label>
+          <textarea id="eventDetails" maxlength="560" type="text" required></textarea>
+        </form>
+        <button id="submit" onclick="window.location.href='checkins/map.html';">Submit</button>
+      </div>
     </div>
     <script src="main.js"></script>
   </body>

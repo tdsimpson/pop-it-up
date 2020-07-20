@@ -25,8 +25,9 @@ if ('geolocation' in navigator) {
     const button = document.getElementById('submit');
     button.addEventListener('click', async event => {
       const shopName = document.getElementById('shopName').value;
+      const catagory = document.getElementById('catagory').value;
       const eventDetails = document.getElementById('eventDetails').value;
-      const data = { lat, lon, shopName, eventDetails, weather };
+      const data = { lat, lon, shopName, catagory, eventDetails, weather };
       const options = {
         method: 'POST',
         headers: {
