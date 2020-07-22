@@ -5,10 +5,20 @@ body,
     width: 100%;
 }
 
-
-p {
-    padding: 10px;
+.weather-bar {
     background-color: lightblue;
+    display: flex;
+    padding: 1rem 5.5rem;
+
+
+    .weather-info {
+        flex: 1;
+    }
+
+    .coords {
+        flex: 1;
+        text-align: end;
+    }
 }
 
 .picandtext {
@@ -31,25 +41,28 @@ p {
 
 .submission-form {
     border: 1.3px solid #403D56;
-    max-width: 500px;
-    margin: 2rem auto;
-    padding: 2rem;
     border-radius: 5px;
+    margin: 2rem auto;
+    max-width: 500px;
+    padding: 2rem;
+
 
     label {
         display: block;
-        padding: 1rem 0 .25rem 0;
         font-size: 14px;
+        padding: 1rem 0 .25rem 0;
+
     }
 
     input,
     textarea,
     select {
+        box-sizing: content-box;
         display: block;
-        width: 100%;
-        border: 1.3px solid #403D56;
-        padding: .5rem;
         font-size: 16px;
+        padding: .5rem;
+        resize: none;
+        width: 100%;
     }
 }
 
@@ -65,7 +78,9 @@ p {
 
 #submit {
     background-color: #403D56;
+    border-radius: 5px;
     border: none;
+    box-sizing: content-box;
     color: white;
     padding: 0.7rem;
     outline: none;
@@ -74,7 +89,7 @@ p {
     width: 100%;
 
     &:hover {
-        background-color: #2680CA;
+        background-color: #686585;
         cursor: pointer;
     }
 }

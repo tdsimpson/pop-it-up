@@ -14,9 +14,11 @@ if ('geolocation' in navigator) {
       const json = await response.json();
       weather = json
 
-      //document.getElementById('city').textContent = weather;
+
+      document.getElementById('city').textContent = weather.name;
       document.getElementById('summary').textContent = weather.weather[0].description;
       document.getElementById('temp').textContent = Math.round(weather.main.temp - 273.15);
+
 
     } catch (error) {
       console.error(error);

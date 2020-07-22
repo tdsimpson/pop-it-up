@@ -28,11 +28,20 @@
       </div>
 
     </div>
-    <p>
-      The weather here at <span id="latitude"></span>&deg;,
-      <span id="longitude"></span>&deg; is <span id="summary"></span> with
-      a temperature of <span id="temp"></span>&deg; C.
-    </p>
+
+    <div class="weather-bar">
+      <p class="weather-info">
+        <span id="city"></span> is <span id="temp"></span>&deg;C
+        with <span id="summary"></span>
+      </p>
+
+      <p class="coords">
+        Coordinates: <span id="latitude"></span>&deg;, <span id="longitude"></span>&deg;
+      </p>
+
+    </div>
+
+
 
 
     <div class="picandtext">
@@ -62,8 +71,12 @@
 
           <label for="eventDetails">Event Details</label>
           <textarea id="eventDetails" maxlength="560" type="text" required></textarea>
+          <label for="upload-photo-button">Upload a photo</label>
+          <input id="upload-photo-button" type="file" value="upload" />
+
         </form>
-        <button id="submit" onclick="window.location.href='checkins/map.html';">Submit</button>
+        <button id="submit"
+          onclick="window.location.href='checkins/map.html';">Submit</button>
       </div>
     </div>
     <script src="main.js"></script>

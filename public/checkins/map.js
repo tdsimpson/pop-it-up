@@ -32,7 +32,7 @@ async function getData() {
     let txt = `${item.shopName}.<br> 
     ${item.catagory}.<br> 
     ${item.eventDetails} <br>
-    ${item.weather.name} is ${Math.round(item.weather.main.temp - 273.15)}&deg;C. 
+    ${item.weather.name} is ${Math.round(item.weather.main.temp - 273.15)}&deg;C 
     with ${item.weather.weather[0].description} <br>
     ${moment((item.timestamp)).format("LLLL")}`;
 
