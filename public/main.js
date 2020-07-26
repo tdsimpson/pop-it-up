@@ -1,3 +1,8 @@
+function redirect() {
+  window.location.replace("checkins/map.html");
+  return false;
+}
+
 // Geo Locate
 let lat, lon;
 if ('geolocation' in navigator) {

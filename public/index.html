@@ -42,12 +42,12 @@
     </div>
 
 
-
-
     <div class="picandtext">
       <img class="shopimg" src="images/business_shop.png" alt="business shop">
       <div class="submission-form">
-        <form>
+
+
+        <form onsubmit="return redirect()">
           <h3>Check In</h3>
 
           <label for="shopName">Shop Name</label>
@@ -72,13 +72,17 @@
           <label for="eventDetails">Event Details</label>
           <textarea id="eventDetails" maxlength="560" type="text" required></textarea>
           <label for="upload-photo-button">Upload a photo</label>
-          <input id="upload-photo-button" type="file" value="upload" />
+          <input id="upload-photo-button" name="myImage" type="file"
+            value="upload" />
 
+          <input id="submit" type="submit"
+            />
         </form>
-        <button id="submit"
-          onclick="window.location.href='checkins/map.html';">Submit</button>
+
       </div>
     </div>
-    <script src="main.js"></script>
+    <script
+      src="main.js">
+  </script>
   </body>
 </html>

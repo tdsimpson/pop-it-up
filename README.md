@@ -1,7 +1,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-# pop-it-up
 A  web app that allows pop-up shops to mark their location on a map, along with event details and weather information in their area.
 
 ### Built With
@@ -40,5 +39,5 @@ API_KEY=[ENTER YOUR API];
 
 5. Run the project locally
 ```
-node index.js
+npm start
 ```
