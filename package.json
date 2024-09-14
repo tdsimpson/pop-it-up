@@ -15,7 +15,7 @@
   "license": "MIT",
   "dependencies": {
     "dotenv": "^8.0.0",
-    "express": "^4.20.0",
+    "express": "^4.21.0",
     "express-fileupload": "^1.1.9",
     "moment": "^2.29.4",
     "multer": "^1.4.2",
